@@ -117,4 +117,46 @@ All colors MUST be HSL.
       linear-gradient(90deg, hsl(var(--border) / 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
   }
+
+  /* Vanta Waves Container */
+  .vanta-waves-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .vanta-waves-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Custom cursor - hide default */
+  .cursor-none,
+  .cursor-none * {
+    cursor: none !important;
+  }
+
+  /* Smooth transitions for interactive elements */
+  a, button, input, textarea {
+    transition: var(--transition-smooth);
+  }
+
+  /* Animation keyframes for special effects */
+  @keyframes glow-pulse {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
 }
