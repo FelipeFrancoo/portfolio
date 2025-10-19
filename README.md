@@ -114,8 +114,8 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 **Felipe Franco**
 
 - GitHub: [FelipeFrancoo](https://github.com/FelipeFrancoo)
-- LinkedIn: [Seu LinkedIn]
-- Email: [seu-email@example.com]
+- LinkedIn: https://www.linkedin.com/in/felipe-franco-b33ba12b4
+- Email: felipefrancolima12@gmail.com
 
 ---
 
