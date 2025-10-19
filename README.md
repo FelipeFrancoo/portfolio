@@ -63,8 +63,6 @@ Este é um site de portfólio single-page application (SPA) construído com tecn
    bun run dev
    ```
 
-4. Abra o navegador em `http://localhost:5173` (porta padrão do Vite).
-
 ## Uso
 
 - **Desenvolvimento**: Execute `npm run dev` para iniciar o servidor local.
@@ -94,20 +92,6 @@ futurist-vibe-port/
 ├── vite.config.ts          # Configuração Vite
 └── tsconfig.json           # Configuração TypeScript
 ```
-
-## Contribuição
-
-Contribuições são bem-vindas! Siga estes passos:
-
-1. Fork o projeto.
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
-3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`).
-4. Push para a branch (`git push origin feature/nova-feature`).
-5. Abra um Pull Request.
-
-## Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
 ## Autor
 
