@@ -61,9 +61,7 @@ const Header = () => {
       }`}
     >
       <nav className="container mx-auto px-6 py-5 flex items-center justify-between">
-        <div className="font-space font-bold text-xl tracking-tight text-ice-white">
-          Felipe<span className="text-silver">.</span>
-        </div>
+          {`<Felipe/>`}
 
         <ul className="hidden md:flex items-center gap-8">
           {["inicio", "sobre", "projetos", "contato"].map((item, index) => (

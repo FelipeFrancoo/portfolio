@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Code2, Database, Globe, Palette, Container } from "lucide-react";
 import { gsap, gsapConfig } from "@/hooks/use-gsap";
+import ProfileFrame from "./ProfileFrame";
 
 const skills = [
   { name: "Node.js", icon: Code2 },
@@ -120,8 +121,18 @@ const About = () => {
             <div className="w-16 h-[2px] bg-gradient-to-r from-silver to-transparent" />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div ref={textRef} className="space-y-6">
+          <div className="grid lg:grid-cols-3 gap-16 items-start">
+            {/* Foto de Perfil */}
+            <div className="flex justify-center lg:justify-start">
+              <ProfileFrame
+                src="/Imagem%20do%20WhatsApp%20de%202025-10-19%20%C3%A0(s)%2001.59.58_dca94dff.jpg"
+                alt="Foto de Felipe Franco"
+                shape="circle"
+                size={240}
+              />
+            </div>
+
+            <div ref={textRef} className="space-y-6 lg:col-span-1">
               <p className="text-muted-foreground text-lg leading-relaxed font-inter">
                 Sou desenvolvedor Full Stack júnior, apaixonado por criar interfaces que misturam design minimalista com tecnologia de ponta. Trabalho em uma empresa do ramo do agro, onde aprendi a aplicar tecnologias para otimização de processos e implantação de soluções com inteligência artificial.
               </p>
@@ -130,7 +141,7 @@ const About = () => {
               </p>
             </div>
 
-            <div ref={skillsRef}>
+            <div ref={skillsRef} className="lg:col-span-1">
               <h3 className="font-space font-semibold text-xl mb-8 text-foreground">
                 Ferramentas de Desenvolvimento
               </h3>
