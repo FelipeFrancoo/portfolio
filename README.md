@@ -1,73 +1,122 @@
-# Welcome to your Lovable project
+# Futurist Vibe Portfolio
 
-## Project info
+Um portfólio pessoal com tema futurista, desenvolvido para apresentar projetos, habilidades e informações de contato de forma interativa e moderna.
 
-**URL**: https://lovable.dev/projects/b263fe79-8a11-4d4b-a721-0abd5c82d69e
+## Descrição
 
-## How can I edit this code?
+Este é um site de portfólio single-page application (SPA) construído com tecnologias modernas para oferecer uma experiência visual imersiva. Inclui animações suaves, design responsivo e seções dedicadas para herói, sobre, projetos, contato e muito mais.
 
-There are several ways of editing your application.
+## Funcionalidades
 
-**Use Lovable**
+- **Design Futurista**: Tema escuro com elementos visuais inspirados em ficção científica.
+- **Animações Interativas**: Utiliza GSAP para transições suaves e efeitos visuais.
+- **Responsivo**: Otimizado para dispositivos móveis e desktop.
+- **Seções Organizadas**:
+  - Hero: Apresentação inicial com chamada para ação.
+  - Sobre: Informações pessoais e habilidades.
+  - Projetos: Galeria de projetos com links e descrições.
+  - Contato: Formulário de contato e links para redes sociais.
+- **Cursor Personalizado**: Interação visual aprimorada.
+- **Transições de Página**: Animações entre seções.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b263fe79-8a11-4d4b-a721-0abd5c82d69e) and start prompting.
+## Tecnologias Utilizadas
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**:
+  - React 18
+  - TypeScript
+  - Vite (para build e desenvolvimento)
+  - Tailwind CSS (para estilização)
+  - shadcn/ui (componentes UI)
+  - GSAP (animações)
+  - PostCSS (processamento CSS)
 
-**Use your preferred IDE**
+- **Ferramentas**:
+  - ESLint (linting)
+  - Bun (gerenciador de pacotes alternativo)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Instalação
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Pré-requisitos
 
-Follow these steps:
+- Node.js (versão 16 ou superior)
+- npm ou bun
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Passos
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/FelipeFrancoo/futurist-vibe-port.git
+   cd futurist-vibe-port
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Instale as dependências:
+   ```bash
+   npm install
+   # ou
+   bun install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   # ou
+   bun run dev
+   ```
+
+4. Abra o navegador em `http://localhost:5173` (porta padrão do Vite).
+
+## Uso
+
+- **Desenvolvimento**: Execute `npm run dev` para iniciar o servidor local.
+- **Build**: Execute `npm run build` para gerar os arquivos de produção.
+- **Preview**: Execute `npm run preview` para visualizar o build localmente.
+
+## Estrutura do Projeto
+
+```
+futurist-vibe-port/
+├── public/                 # Arquivos estáticos
+│   ├── robots.txt
+│   └── projects/           # Imagens de projetos
+├── src/
+│   ├── components/         # Componentes React
+│   │   ├── ui/             # Componentes shadcn/ui
+│   │   └── ...             # Outros componentes (Hero, About, etc.)
+│   ├── hooks/              # Hooks customizados
+│   ├── lib/                # Utilitários
+│   ├── pages/              # Páginas da aplicação
+│   ├── App.tsx             # Componente principal
+│   ├── main.tsx            # Ponto de entrada
+│   └── index.css           # Estilos globais
+├── index.html              # HTML base
+├── package.json            # Dependências e scripts
+├── tailwind.config.ts      # Configuração Tailwind
+├── vite.config.ts          # Configuração Vite
+└── tsconfig.json           # Configuração TypeScript
 ```
 
-**Edit a file directly in GitHub**
+## Contribuição
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Contribuições são bem-vindas! Siga estes passos:
 
-**Use GitHub Codespaces**
+1. Fork o projeto.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
+3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`).
+4. Push para a branch (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Licença
 
-## What technologies are used for this project?
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
-This project is built with:
+## Autor
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**Felipe Franco**
 
-## How can I deploy this project?
+- GitHub: [FelipeFrancoo](https://github.com/FelipeFrancoo)
+- LinkedIn: [Seu LinkedIn]
+- Email: [seu-email@example.com]
 
-Simply open [Lovable](https://lovable.dev/projects/b263fe79-8a11-4d4b-a721-0abd5c82d69e) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Feito com ❤️ usando React e Vite.
