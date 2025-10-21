@@ -26,7 +26,7 @@ const VantaWaves = ({ children }: VantaWavesProps) => {
         vantaEffect.current.destroy();
       }
 
-      // Inicializar efeito Vanta WAVES
+      // Inicializar efeito Vanta WAVES com configurações personalizadas
       vantaEffect.current = window.VANTA.WAVES({
         el: vantaRef.current,
         THREE: window.THREE,
@@ -37,10 +37,11 @@ const VantaWaves = ({ children }: VantaWavesProps) => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x0,
-        shininess: 5.00,
-        waveSpeed: 1.25,
-        zoom: 1.00
+        color: 0xb0b0b,
+        shininess: 30.00,
+        waveHeight: 22.00,
+        waveSpeed: 1.15,
+        zoom: 0.98
       });
     };
 
