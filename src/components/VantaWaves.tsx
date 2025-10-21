@@ -39,8 +39,8 @@ const VantaWaves = ({ children }: VantaWavesProps) => {
         scaleMobile: 1.00,
         color: 0xb0b0b,
         shininess: 30.00,
-        waveHeight: 22.00,
-        waveSpeed: 1.15,
+        waveHeight: 15.00,
+        waveSpeed: 0.90,
         zoom: 0.98
       });
     };
