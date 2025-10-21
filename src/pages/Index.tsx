@@ -7,14 +7,17 @@ import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 import CustomCursor from "@/components/CustomCursor";
 import VantaWaves from "@/components/VantaWaves";
+import { useState } from "react";
 
 const Index = () => {
+  const [cursorEnabled, setCursorEnabled] = useState(true);
+
   return (
     <PageTransition>
-      <CustomCursor />
+      {cursorEnabled && <CustomCursor />}
       <VantaWaves />
-      <div className="min-h-screen text-foreground cursor-none relative z-10">
-        <Header />
+      <div className={`min-h-screen text-foreground ${cursorEnabled ? 'cursor-none' : ''} relative z-10`}>
+        <Header cursorEnabled={cursorEnabled} setCursorEnabled={setCursorEnabled} />
         <main>
           <Hero />
           <About />

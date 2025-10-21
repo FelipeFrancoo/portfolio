@@ -1,7 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "@/hooks/use-gsap";
+import { Switch } from "@/components/ui/switch";
 
-const Header = () => {
+interface HeaderProps {
+  cursorEnabled: boolean;
+  setCursorEnabled: (enabled: boolean) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ cursorEnabled, setCursorEnabled }) => {
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLLIElement[]>([]);
@@ -64,14 +70,21 @@ const Header = () => {
           {`<Felipe/>`}
 
         <ul className="hidden md:flex items-center gap-8">
+          <li className="flex items-center gap-2">
+            <span className="text-sm text-muted-foreground">Cursor</span>
+            <Switch
+              checked={cursorEnabled}
+              onCheckedChange={setCursorEnabled}
+            />
+          </li>
           {["inicio", "sobre", "projetos", "contato"].map((item, index) => (
             <li
               key={item}
               ref={(el) => {
-                if (el) linksRef.current[index] = el;
+                if (el) linksRef.current[index + 1] = el;
               }}
-              onMouseEnter={() => handleLinkHover(index, true)}
-              onMouseLeave={() => handleLinkHover(index, false)}
+              onMouseEnter={() => handleLinkHover(index + 1, true)}
+              onMouseLeave={() => handleLinkHover(index + 1, false)}
             >
               <button
                 onClick={() => scrollToSection(item)}

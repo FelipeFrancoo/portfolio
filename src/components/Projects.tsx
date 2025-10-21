@@ -28,6 +28,14 @@ const projects = [
     code: "https://github.com/FelipeFrancoo/NotaFlex.git",
     image: "/projects/notaflex_1200x600.png"
   },
+  {
+    title: "Saldoo",
+    description: "Um aplicativo web moderno de controle financeiro pessoal. Que permite gerenciar transações, categorias e visualizar gráficos de despesas, com autenticação de usuários e interface responsiva.",
+    stack: ["React", "Vite", "Node.js"],
+    demo: "https://saldoo-devfelipe.vercel.app/",
+    code: "https://github.com/FelipeFrancoo/Saldoo.git",
+    image: "/projects/saldoo_1200x600.png",
+  },
 ];
 
 const Projects = () => {
@@ -340,6 +348,85 @@ const Projects = () => {
                       asChild
                     >
                       <a href={projects[2].code} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Código
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Featured Project - Saldoo */}
+            <div
+              ref={(el) => {
+                if (el) cardsRef.current[3] = el;
+              }}
+              className="glass-effect rounded-lg overflow-hidden group hover:border-silver/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(184,184,184,0.2)]"
+            >
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Image */}
+                <div className="relative h-64 lg:h-auto overflow-hidden">
+                  <img
+                    src={projects[3].image}
+                    alt={projects[3].title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent" />
+                </div>
+
+                {/* Content */}
+                <div className="p-8 flex flex-col justify-between">
+                  <div className="space-y-4">
+                    <h3 className="font-space font-semibold text-2xl text-foreground group-hover:text-silver transition-colors">
+                      {projects[3].title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {projects[3].description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {projects[3].stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="text-xs font-inter px-3 py-1 rounded-full bg-accent/50 text-muted-foreground border border-border"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3 pt-4">
+                    <Button
+                      ref={(el) => {
+                        if (el) buttonsRef.current.set(`${projects[3].title}-demo`, el);
+                      }}
+                      variant="ghost"
+                      size="sm"
+                      className="text-silver hover:text-foreground hover:bg-accent/50 transition-all"
+                      onMouseEnter={() => handleButtonHover(`${projects[3].title}-demo`, true)}
+                      onMouseLeave={() => handleButtonHover(`${projects[3].title}-demo`, false)}
+                      asChild
+                    >
+                      <a href={projects[3].demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </a>
+                    </Button>
+                    <Button
+                      ref={(el) => {
+                        if (el) buttonsRef.current.set(`${projects[3].title}-code`, el);
+                      }}
+                      variant="ghost"
+                      size="sm"
+                      className="text-silver hover:text-foreground hover:bg-accent/50 transition-all"
+                      onMouseEnter={() => handleButtonHover(`${projects[3].title}-code`, true)}
+                      onMouseLeave={() => handleButtonHover(`${projects[3].title}-code`, false)}
+                      asChild
+                    >
+                      <a href={projects[3].code} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
                         Código
                       </a>
